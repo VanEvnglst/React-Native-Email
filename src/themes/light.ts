@@ -38,7 +38,11 @@ const theme = createTheme({
     $primary: palette.blue70,
     $windowBackground: '#f0f0f0',
     $background: palette.paper10,
-    $foreground: palette.paper900
+    $foreground: palette.paper900,
+    $sidebarBackground: palette.navy20,
+    $sidebarForeground: palette.navy900,
+    $sidebarSeparator: palette.paper00 + '20',
+    $headerBarBackground: palette.paper20,
   },
   borderRadii: {
     xs: 4,
@@ -48,14 +52,15 @@ const theme = createTheme({
     hg: 128
   },
   textVariants: {
-defaults: {
-  color: '$foreground',
-  fontSize: 16
-},
-sidebar: {
-  color: '$sidebarForeground'
-}
+    defaults: {
+      color: '$foreground',
+      fontSize: 16
+    },
+    sidebar: {
+      color: '$sidebarForeground'
+    }
   }
-})
+});
 
+export default theme
 export type Theme = typeof theme
