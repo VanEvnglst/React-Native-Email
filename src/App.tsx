@@ -1,12 +1,15 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { View, Text } from 'react-native';
+import { ThemeProvider } from '@shopify/restyle'
 import Navigations from './navigation';
+import light from './themes/light';
 
 const App = () => {
   return (
     <NavigationContainer>
+      <ThemeProvider theme={light}>
      <Navigations/>
+     </ThemeProvider>
     </NavigationContainer>
   )
 }
