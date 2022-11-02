@@ -1,4 +1,6 @@
 import Box from './box';
 import Text from './text'
 import Container from './container';
-export { Box, Text, Container }
+import AnimatedBox from './animated-box';
+import Bar from './bar'
+export { Box, Text, Container, AnimatedBox, Bar }
