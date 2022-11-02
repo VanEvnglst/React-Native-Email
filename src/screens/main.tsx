@@ -1,13 +1,16 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-
+import { View } from 'react-native';
+import { Box, Text, Container } from '../atoms';
+import HeaderBar from '../components/header-bar';
+import NoteList from '../components/note-list';
 export default function MainScreen() {
   return(
-    <View style={{
-      flex:1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    }}
-    ><Text>Hello again</Text></View>
+    <Container justifyContent={'center'}
+    alignItems='center'>
+      <NoteList />
+      <HeaderBar/>
+    </Container>
+     
+  
   )
 }

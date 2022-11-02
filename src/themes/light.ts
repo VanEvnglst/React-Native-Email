@@ -59,6 +59,12 @@ const theme = createTheme({
     sidebar: {
       color: '$sidebarForeground'
     }
+  },
+  barVariants: {
+    headerBar: {
+      bg: '$headerBarBackground',
+      borderRadius: 'hg'
+    }
   }
 });
 
