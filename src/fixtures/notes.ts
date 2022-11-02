@@ -22,7 +22,7 @@ for (let i = 0; i < 100; ++i) {
   DATA.push({
     id: shortid.generate(),
     title: capitalizeFirstLetter(
-      lorem.generateWords(Math.round(Math.random() * 10) +2)
+      lorem.generateWords(Math.round(Math.random() * 10) + 2)
     ),
     body: capitalizeFirstLetter(
       lorem.generateSentences(Math.round(Math.random() * 3) + 1)
