@@ -1,17 +1,16 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { View, Text } from 'react-native';
-
-
+import { ThemeProvider } from '@shopify/restyle'
+import Navigations from './navigation';
+import light from './themes/light';
+import StatusBar from './components/status-bar';
 const App = () => {
   return (
     <NavigationContainer>
-      <View style={{
-        flex:1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-      ><Text>Hello again</Text></View>
+      <ThemeProvider theme={light}>
+        <StatusBar />
+     <Navigations/>
+     </ThemeProvider>
     </NavigationContainer>
   )
 }
