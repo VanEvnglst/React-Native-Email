@@ -6,6 +6,7 @@ const palette = {
   red: 'red',
   blue: 'blue',
   yellow: 'yellow',
+  white: 'white',
   paper00: '#ffffff',
   paper10: '#f5f5f4',
   paper20: '#e6e6e6',
@@ -32,6 +33,7 @@ const theme = createTheme({
     tablet: 768
   },
   colors: {
+    white: palette.white,
     black: palette.black,
     red: palette.red,
     blue: palette.blue,
