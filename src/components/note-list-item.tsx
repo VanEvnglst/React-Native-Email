@@ -27,11 +27,30 @@ const NoteListItem: React.FC<ListItemProps> = props => {
       progress={progress} />, []);
 
   return (
-    <SwipeableView bg='yellow' onSwipeLeft={handleSwipeLeft} backView={renderBackView}>
+    <SwipeableView 
+      bg='yellow' 
+      onSwipeLeft={handleSwipeLeft} 
+      backView={renderBackView}
+    >
       <Box bg='$background'>
-      <TouchableOpacity bg='$background' px='lg' py='sm' onPress={handlePress}>
-        <Text fontWeight='bold' ellipsizeMode='tail' numberOfLines={1} mb='xs'>{props.title}</Text>
-        <Text ellipsizeMode='tail' numberOfLines={2} fontSize={14} opacity={0.7}>{props.body}</Text>
+      <TouchableOpacity 
+        bg='$background' 
+        px='lg' 
+        py='sm' 
+        onPress={handlePress}
+      >
+        <Text 
+          fontWeight='bold'
+          ellipsizeMode='tail'
+          numberOfLines={1} 
+          mb='xs'
+        >{props.title}</Text>
+        <Text 
+          ellipsizeMode='tail'
+          numberOfLines={2}
+          fontSize={14}
+          opacity={0.7}
+        >{props.body}</Text>
       </TouchableOpacity>
       </Box>
     </SwipeableView>
