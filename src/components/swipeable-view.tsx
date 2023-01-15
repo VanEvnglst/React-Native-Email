@@ -1,7 +1,7 @@
 import React, { forwardRef, useCallback, useImperativeHandle } from 'react'
 import { Dimensions } from 'react-native'
 import { PanGestureHandler, PanGestureHandlerGestureEvent, PanGestureHandlerProps } from 'react-native-gesture-handler'
-import { interpolate, SharedValue, useAnimatedGestureHandler, useAnimatedStyle, useDerivedValue, useSharedValue, withTiming } from 'react-native-reanimated'
+import { interpolate, runOnJS, SharedValue, useAnimatedGestureHandler, useAnimatedStyle, useDerivedValue, useSharedValue, withTiming } from 'react-native-reanimated'
 import AnimatedBox, { AnimatedBoxProps } from '../atoms/animated-box'
 import Box from '../atoms/box'
 
@@ -47,6 +47,7 @@ const SwipeableView = forwardRef<SwipeableViewHandle, Props>((props, ref) => {
       const shouldBeDismissed = translateX.value < SWIPE_THRESHOLD
       if (shouldBeDismissed) {
         translateX.value = withTiming(-1)
+        runOnJS(invokeSwipeLeft)()
       } else {
         translateX.value = withTiming(0)
       }
