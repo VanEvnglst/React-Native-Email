@@ -26,7 +26,9 @@ export default function MainScreen({ navigation }: Props) {
 
 
   const handleNoteListItemPress = useCallback((noteId: string) => {
-
+    navigation.navigate('Detail', {
+      noteId
+    })
   }, []);
 
   const handleNoteListItemSwipeLeft = useCallback((_noteId: string, conceal: () => void) => {
