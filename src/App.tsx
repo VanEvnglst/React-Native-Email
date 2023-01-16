@@ -1,17 +1,20 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { View, Text } from 'react-native';
+import { ThemeProvider } from '@shopify/restyle'
+import Navigations from './navigation';
+import StatusBar from './components/status-bar';
+import { activeThemeAtom } from './states/theme';
+import { useAtom } from 'jotai';
 
 
 const App = () => {
+  const [activeTheme] = useAtom(activeThemeAtom)
   return (
     <NavigationContainer>
-      <View style={{
-        flex:1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-      ><Text>Hello again</Text></View>
+      <ThemeProvider theme={activeTheme}>
+        <StatusBar />
+     <Navigations/>
+     </ThemeProvider>
     </NavigationContainer>
   )
 }
